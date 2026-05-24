@@ -1,0 +1,13 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)    
+        return False              
+
+
+# 1. sort. T-O(nlogn), S-O(1)
+# 2. hashmap. T-O(n), S-O(n)        
+        
